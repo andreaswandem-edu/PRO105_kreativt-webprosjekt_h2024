@@ -1,0 +1,252 @@
+/* Ansvarlig for dokument: Andreas */
+
+/* Grunnleggende sidestil */
+body {
+    background-color: rgb(255, 210, 139);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* ------------------------------- */
+/* [Styling for navigasjonsmenyen] */
+/* ------------------------------- */
+
+/* Sentrerer nav med maks-bredde */
+nav {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Justerer nav, og fordeler innhold */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 25px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(85, 68, 46);
+}
+
+nav img {
+    margin-right: 10px; 
+    width: 25px;
+}
+
+/* NorwayTrip tekst */
+nav li:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quiz-button {
+    background-color: rgb(255, 233, 197);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.quiz-button:hover {
+    background-color: rgb(255, 240, 216);
+    color: rgb(170, 140, 93);
+}
+
+/* ---------------------------- */
+/* [Styling for introduksjonen] */
+/* ---------------------------- */
+
+/* Sommer kort */
+.introduction {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 125px;
+    background-color: rgb(255, 233, 197);
+    border: 4px solid rgb(213, 175, 116);
+    color: rgb(170, 140, 93);
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInOut 1.2s;
+}
+
+/* ---------------------------- */
+/* [Styling for hovedinnholdet] */
+/* ---------------------------- */
+
+/* Posisjonerer main midt på siden */
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    background-color: rgb(255, 233, 197);
+    border: 4px solid rgb(213, 175, 116);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+    animation: scaleInHeight 2s;
+}
+
+/* Bredde for venstre del */
+.left-side {
+    width: 375px;
+}
+
+/* Bredde / layout for høyre del */
+.right-side {
+    display: flex;
+    width: 250px;
+    background-color: rgb(255, 225, 178);
+}
+
+h1 {
+    background-color: rgb(255, 225, 178);
+    font-size: 24px;
+    color: rgb(128, 105, 70);
+    padding: 10px;    
+    margin: 0;
+}
+
+.left-side p {
+    color: rgb(170, 140, 93);
+    margin: 10px;
+}
+
+/* Skille mellom tekst og bilder */
+.divider {
+    background-color: rgb(213, 171, 116);
+    width: 5px;
+}
+
+/* Plasserer bildene under hverandre med scroll */
+.scrollable-content {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    margin: 10px;
+}
+
+.scrollable-content img {
+    border: 3px solid rgb(213, 171, 116);
+    border-radius: 10px;
+    min-height: 140px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Fjerner margin fra siste bilde */
+.scrollable-content img:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Hint tekst under boksen */
+.hint {
+    text-align: center;
+    color: rgb(128, 105, 70);
+    animation: fadeIn 4s;
+}
+
+/* Hover effekt: Endrer musepekeren */
+.scrollable-content img:hover {
+    cursor: pointer;
+}
+
+/* Active effekt: Bildet skaleres */
+.scrollable-content img:active{
+    position: absolute;
+    right: 9px;
+    height: 225px;
+    width: 400px;
+    opacity: 1;
+    z-index: 1;
+}
+
+/*-----------------------------*/
+/* [Styling for tilbake-knapp] */
+/*-----------------------------*/
+
+/* Plasserer knappen nederst i venstre hjørne */
+.return-button {
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+}
+
+.return-button a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 5px solid rgb(255, 233, 197);
+    background-color: rgb(255, 248, 236);
+}
+
+/* Størrelse på pilen */
+.return-button img {
+    width: 30px;
+}
+
+/* ----------------------- */
+/* [Animasjoner for siden] */
+/* ----------------------- */
+
+/* Gradvis visning/skalering på høyde */
+@keyframes scaleInHeight {
+    0% {
+        height: 0px;
+        opacity: 0;
+        font-size: 0;
+    }
+    50% {
+        height: 0px;
+        opacity: 0;
+        font-size: 0; 
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
+/* Gradvis visning etter 50% */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Midlertidlig visning */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

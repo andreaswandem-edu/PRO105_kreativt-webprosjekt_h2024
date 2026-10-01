@@ -1,0 +1,220 @@
+/* Ansvarlig for dokument: Solveig */
+
+/* Grunnleggende sidestil */
+body {
+    background-color: rgb(173, 194, 156);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* ----------------------------- */
+/* [Styling for navigasjonsmeny] */
+/* ----------------------------- */
+
+/* Sentrerer nav med maks bredde */
+nav {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Justerer nav, og fordeler innhold */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 25px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(58, 65, 52);
+}
+
+nav img {
+    margin-right: 10px;
+    width: 25px;
+}
+
+/* NorwayTrip tekst */
+nav li:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quiz-button {
+    background-color: rgb(214, 225, 206);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover effekt: Gjør bakgrunnsfargen lysere */
+.quiz-button:hover {
+    background-color: rgb(228, 235, 222);
+}
+
+/* ---------------------------- */
+/* [Styling for hovedinnholdet] */
+/* ---------------------------- */
+
+/* Posisjonerer main midt på siden */
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(58, 65, 52);
+}
+
+.description {
+    color: rgb(87, 97, 78);
+    max-width: 540px;
+}
+
+/* Plasserer kortene horisontalt */
+.container {
+    display: flex;
+    gap:15px;
+}
+
+/* Styling for begge kortene */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 5px solid;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Sommer-kortet */
+.summer {
+    background-color: rgb(255, 210, 139);
+    border-color: rgb(213, 175, 116);
+    color: rgb(170, 140, 93);
+    animation: slideInRight 1s;
+}
+
+/* Vinter-kortet */
+.winter {
+    background-color: rgb(133, 197, 213);
+    border-color: rgb(111, 164, 178);
+    color: rgb(89, 131, 142);
+    animation: slideInLeft 1s;
+}
+
+/* Hover effekt: Tydeliggjør at option kan trykkes på*/
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Active effekt: Fremhever "knapp følelsen" */
+.card:active {
+    transform: scale(1);
+}
+
+/* -------------------------------- */
+/* [Styling for informasjons-knapp] */
+/* -------------------------------- */
+
+/* Posisjonerer info-knappen og justerer innholdet */
+.info-button {
+    position: fixed;
+    left: 2%;
+    bottom: 4%;
+    display: flex;
+    align-items: center;
+    animation: fadeInDelay 3s;
+}
+
+/* Styling for sirkelen: Synlig som standard */
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgb(241, 245, 239);
+    border: 5px solid rgb(214, 225, 206);
+    color: rgb(58, 65, 52);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Styling for teksten: Skjult som standard */
+.info-text {
+    background-color: rgb(212, 224, 204);
+    padding: 10px;
+    transform: translateX(-10px);
+    color: rgb(58, 65, 52);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 0;
+    display: none;
+}
+
+.info-text a {
+    text-decoration: none;
+    color: rgb(115, 129, 104);
+}
+
+/* Hover effekt: Viser skjult element */
+.info-button:hover .info-text {
+    display: block;
+}
+
+/* ----------------------- */
+/* [Animasjoner for siden] */
+/* ----------------------- */
+
+/* Beveges/skaleres inn på siden fra venstre */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        height: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+} 
+
+/* Beveges/skaleres inn på siden fra høyre */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        height: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+} 
+
+/* Gradvis øking av synlighet etter 50% */
+@keyframes fadeInDelay {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

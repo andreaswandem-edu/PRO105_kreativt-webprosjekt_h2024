@@ -1,0 +1,212 @@
+/* Ansvarlig for dokument: Billal */
+
+/* Grunnleggende sidestil */
+body {
+    background-color: rgb(133, 197, 213);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* ------------------------------- */
+/* [Styling for navigasjonsmenyen] */
+/* ------------------------------- */
+
+/* Sentrerer nav med maks-bredde */
+nav {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Justerer nav, og fordeler innhold */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    list-style: none;
+    padding: 0;
+    margin: 20px 25px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(44, 66, 71);
+}
+
+nav img {
+    margin-right: 10px;
+    width: 25px;
+}
+
+/* NorwayTrip tekst */
+nav li:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quiz-button {
+    background-color: rgb(194, 226, 234);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.quiz-button:hover {
+    background-color: rgb(214, 236, 241);
+    color: rgb(89, 131, 142);
+}
+
+/* ---------------------------- */
+/* [Styling for hovedinnholdet] */
+/* ---------------------------- */
+
+/* Posisjonerer main midt på siden */
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(44, 66, 71);
+    margin: 10px;
+}
+
+.info-paragraph {
+    color: rgb(67, 99, 107);
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Plassering av kortene */
+.container {
+    display:flex;
+    justify-content: space-between;
+    width: 650px;
+}
+
+/* Styling for alle kortene */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 125px;
+    background-color: rgb(194, 226, 234);
+    color: rgb(89, 131, 142);
+    font-size: 24px;
+    font-weight: bold;
+    border: 4px solid rgb(111, 164, 178);
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    animation: scaleInHeight 0.75s;
+}
+
+/* Hover effekt: Viser ekstra informasjon */
+.card:hover + .info-container {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+
+/* Hover effekt: Forstørrer kortene  */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Active effekt: Minsker kortene (knapp følelse) */
+.card:active {
+    transform: scale(1);
+}
+
+/*----------------------*/
+/* [Styling for rating] */
+/*----------------------*/
+
+/* Styling for rating boksen */
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(174, 216, 227);
+    border-radius: 10px;
+    height: 40px;
+    opacity: 0;
+}
+
+/* Plasserer innhold horisontalt */
+.rating-wrapper {
+    display:flex;
+    align-items: center;
+}
+
+/* Plasserer rating sirklene horisontalt */
+.rating-circles {
+    display: flex;
+    list-style: none;
+    padding: 7px;
+}
+
+.score {
+    color: rgb(111, 164, 178);
+    font-weight: bold;
+}
+
+.rating-circles img {
+    display: block; /*Fjerner ekstra plass*/
+    width: 16px;
+}
+
+.symbol {
+    width: 30px;
+    height: 30px;
+    margin: 7px
+}
+
+/*-----------------------------*/
+/* [Styling for tilbake-knapp] */
+/*-----------------------------*/
+
+/* Plasserer knappen nederst i venstre hjørne */
+.return-button {
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+}
+
+.return-button a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 5px solid rgb(194, 226, 234);
+    background-color: rgb(235, 245, 248);
+}
+
+/* Størrelse på pilen */
+.return-button img {
+    width: 30px;
+}
+
+/* ----------------------- */
+/* [Animasjoner for siden] */
+/* ----------------------- */
+
+/* Tones / skaleres gradvis inn på siden i høyden */
+@keyframes scaleInHeight {
+    0% {
+        height: 0px;
+        opacity: 0;
+        font-size: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+

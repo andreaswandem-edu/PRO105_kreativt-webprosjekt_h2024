@@ -1,0 +1,180 @@
+/* Ansvarlig for dokument: Solveig */
+
+/* Fonts */
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/RubikMoonrocks-Regular.ttf);
+}
+
+/* Grunnleggende sidestil */
+body {
+    background-color: rgb(173, 194, 156);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Plasserer bakgrunnsbilde */
+body::before {
+    content: "";
+    background-image:url(../img/background.png);
+    opacity: 0.8;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+/* ------------------------------- */
+/* [Styling for navigasjonsmenyen] */
+/* ------------------------------- */
+
+/* Sentrerer nav med maks bredde */
+nav {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(58, 65, 52);
+    margin: 20px 25px;
+    padding: 2px 0; /*Kompanserer for fravær av quiz-knapp*/
+}
+
+nav img {
+    margin-right: 10px;
+    width: 25px;
+}
+
+/* ---------------------------- */
+/* [Styling for hovedinnholdet] */
+/* ---------------------------- */
+
+/* Posisjonerer main midt på siden */
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/* Tittel */
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: rgb(173, 194, 156);
+    animation: slideInRight 2s;
+}
+
+span {
+    color: rgb(200, 214, 189);
+}
+
+/* Slagord */
+h2 {
+    font-size: 22px;
+    color: rgb(200, 214, 189);
+    margin-bottom: 30px;
+    margin: 0;
+    margin-bottom: 25px;
+    animation: slideInLeft 2s;
+}
+
+/* Midtstiller enter-knappen langs X-aksen */
+.enter-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styler og posisjonerer <p> og <img> ved siden av hverandre */
+.enter-button a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 10px 10px;
+    background-color: rgb(173, 194, 156);
+    animation: fadeIn 3s;
+}
+
+.enter-button p {
+    color: rgb(87, 97, 78);
+    margin: 0;
+}
+
+.enter-button img {
+    width: 20px;
+}
+
+/* Hover effekt: Tydeliggjør at knappen kan trykkes på*/
+.enter-button a:hover {
+    background-color: rgb(187, 204, 173);
+    transform: scale(1.02);
+}
+
+/* Active effekt: Minsker knappen (knapp følelse) */
+.enter-button:active {
+    transform: scale(1);
+}
+
+/* ----------------------- */
+/* [Animasjoner for siden] */
+/* ----------------------- */
+
+/* Beveges inn på siden fra venstre */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Beveges inn på siden fra høyre */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Gradvis øking av synlighet etter 60% */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+

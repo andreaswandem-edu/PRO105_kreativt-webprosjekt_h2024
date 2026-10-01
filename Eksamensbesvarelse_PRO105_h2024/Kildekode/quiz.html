@@ -1,0 +1,59 @@
+<!-- Ansvarlig for dokument: Andreas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorwayTrip</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <!-- Navigasjonsmeny -->
+    <nav>
+        <ul>
+            <li><a href="frontpage.html"><img src="img/symbols/standard-navbar.logo.png" alt="NorwayTrip logo">NorwayTrip</a></li>
+            <li><a href="quiz.html" class="quiz-button">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hovedinnhold -->
+    <main>
+        <h1>Season quiz</h1>
+        <!-- Quiz-seksjon -->
+        <div>
+            <div class="question-container">
+                <h2><b>Question:</b> Do you prefer warm or cold weather?</h2>
+                <div class="inner-container">
+                    <a href="#summer" class="option summer">
+                        <img src="img/summer.png" alt="Summer illustration">
+                        <p>Warm climate</p>
+                    </a>
+                    <a href="#winter" class="option winter">
+                        <img src="img/winter.png" alt="Winter illustration">
+                        <p>Cold climate</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultat-seskjon -->
+        <div class="result">
+            <div id="summer" class="display summer">
+                <p>Based on what you chose, your favourite season is: <b>Summer</b> 🏖️</p>
+                <a href="summer-season.html"><img src="img/symbols/summer-arrow.forward.circle.png" alt="Right arrow"></a>
+            </div>
+            <div id="winter" class="display winter">
+                <p>Based on what you chose, your favourite season is: <b>Winter</b> ☃️</p>
+                <a href="winter-season.html"><img src="img/symbols/winter-arrow.forward.circle.png" alt="Right arrow"></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tilbake-knapp -->
+    <div class="return-button">
+        <a href="frontpage.html">
+            <img src="img/symbols/standard-arrow.left.png" alt="Return to front page">
+        </a>
+    </div>
+</body>
+</html>
